@@ -824,14 +824,19 @@ aside > img {
 }
 
 @media screen and (max-width: 768px) {
+
     #blog aside {
         display: none;
     }
 
     .tempo {
-        width: 320px;
+        width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .tempo img {
+        margin: 0 auto;
     }
 
     .txt-blog {
