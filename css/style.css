@@ -390,13 +390,12 @@ h4 {
 
     #ecommerce {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
         padding: 0;
     }
 
     #produtos {
         width: 200px;
+        margin: 0;
     }
 }
 
@@ -409,13 +408,14 @@ h4 {
     }
 
     #ecommerce {
-        padding: 10px;
-        margin-top: 0;
+        padding: 0px;
+        margin: 0;
         width: 100%;
+        border: 1px solid;
     }
 
     #produtos {
-        width: 150px;
+        width: 200px;
         margin-right: 20px;
     }
 
@@ -445,6 +445,18 @@ h4 {
         padding: 10px;
         margin-top: 0;
         width: 100%;
+    }
+
+    /* #produtos:nth-child(1) {
+        display: none;
+    } */
+
+    /* #produtos:nth-child(2) {
+        margin-right: 0;
+    } */
+
+    #produtos:nth-child(3) {
+        display: none;
     }
 
     #produtos:nth-child(4) {
