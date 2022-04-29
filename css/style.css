@@ -1,0 +1,901 @@
+/*********************** CONFIGURAÇÃO DO GERAL ****************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(../imagens/fundo.png) repeat-x;
+    background-size: 55px ;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#container-main {
+    /* border: 1px solid; */
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*********************** CONFIGURAÇÃO CABEÇALHO ****************************/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    /* background: #a5c9f5; */
+}
+
+header h6 {
+    font-size: medium;
+    margin: 0 0 0 10px;
+}
+
+#caminhao,
+#dinheiro,
+#whats,
+#busca {
+    display: flex;
+    align-items: center;
+}
+
+
+/*********************** CONFIGURAÇÃO @ MEDIA CABEÇALHO ****************************/
+
+@media screen and (max-width: 1024px) {
+    #caminhao {
+        margin-left: 15px;
+    }
+
+    #whats > h6 {
+        width: 160px;
+        font-weight: 800;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #caminhao,
+    #dinheiro,
+    #whats {
+        display: none;
+    }
+
+    header {
+        padding:  10px;
+        justify-content: space-between;
+    }
+
+    #busca input {
+        width: 170px;
+    }
+}
+
+/******************************** CONFIGURAÇÃO MENU ********************************/
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background: #154987;
+}
+
+nav ul {
+    display: flex;
+}
+
+#menu li a {
+    color: #f1f1f1;
+}
+
+#menu,
+#redes {
+    gap: 3rem;
+}
+
+#menu a:hover {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+    color: #a8a5a5;
+}
+
+#redes i {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/*********************** CONFIGURAÇÃO DO MOBILE ****************************/
+
+@media screen and (max-width: 768px) {
+
+    #btn-mobile {
+        display: block;
+        margin-left: -30px;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 89.7%;
+        margin-left: -32px;
+        background: #154987;
+        transition: .3s;
+        z-index: 1000;
+        height: 0;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #menu li {
+        padding: 10px;
+    }
+
+    #menu a:hover {
+        background: #9BD4B8;
+        padding: 5px 1.2rem;
+        color: #f16322;
+    }
+
+    #nav.active #menu {
+        height: 35vh;
+        visibility: visible;
+        /* overflow-y: auto; */
+    }
+
+    #btn-mobile {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    /* Estilos gerais para as linhas */
+    #btn-mobile .line {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #f1f1f1;
+        margin: 10px;
+        border-radius: 4px;
+        transition: .2s;
+        opacity: .25s;
+    }
+
+    /* Selecionando as linhas individualmente para adicionar efeitos diferentes quando a classe ativa é adicionada ao menu de hambúrguer.*/
+    #nav.active .line:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+        /*Moves down this line 13px and rotates it 45 degrees to create the X*/
+    }
+
+    #nav.active .line:nth-child(2) {
+        opacity: 0;
+        /*Hides this line.*/
+    }
+
+    #nav.active .line:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+        /*Moves up this line 13px and rotates it -45 degrees to create the X*/
+    }
+}
+
+/*********************** CONFIGURAÇÃO DO SLIDE ****************************/
+
+.conteudo {
+    float: left;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    #carrossel {
+        width: 118%;
+        text-align: center;
+    }
+
+    .carousel-item > img {
+        width: 120%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #carrossel {
+        width: 100%;
+    }
+}
+
+/**********************-* CONFIGURAÇÃO DO NOTÌCIAS ****************************/
+
+#noticias {
+    width: 430px;
+    float: right;
+    padding: 0px 10px;
+}
+
+#noticias ul {
+    display: block;
+}
+
+#noticias li {
+    display: flex;
+    padding: 15px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid;
+}
+
+#noticias li:nth-child(3) {
+    padding-bottom: 0;
+    border: none;
+}
+
+#noticias li img {
+    height: 150px;
+}
+
+.txt {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 375px) {
+
+    #noticias li img {
+        height: 200px;
+    }
+
+    #noticias .txt {
+        text-align: left;
+    }
+
+    #noticias li:nth-child(1) {
+        display: none;
+    }
+
+    #noticias li:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #noticias li img {
+        height: 200px;
+    }
+
+    #noticias .txt {
+        text-align: left;
+    }
+
+    /* #noticias li:nth-child(1) {
+        display: none;
+    }
+
+    #noticias li:nth-child(3) {
+        display: none;
+    } */
+}
+
+@media screen and (max-width: 1024px) {
+
+    #noticias {
+        width: auto;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    #noticias ul {
+        display: flex;
+    }
+
+    #noticias li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1 1;
+        padding: 15px;
+        border: none;
+    }
+
+    #noticias li img {
+        margin-bottom: 10px;
+    }
+
+    #noticias li p {
+        margin: 0;
+        padding: 0;
+    }
+
+    #noticias li {
+        background: #e5ebf2;
+    }
+
+    #noticias li:nth-child(2) {
+        background: #ceddee;
+    }
+}
+
+
+/**********************-* CONFIGURAÇÃO DO PRODUTOS ****************************/
+
+h4 {
+    float: left;
+    width: 765px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #f1f1f1;
+    background: #f16322;
+}
+
+#ecommerce {
+    float: left;
+    width: 765px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+#produtos {
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+}
+
+#produtos img {
+    width: 70%;
+}
+
+#produtos h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f16322;
+}
+
+#produtos p {
+    font-size: .9rem;
+}
+
+#produtos a {
+    font-size: 1.2rem;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    h4 {
+        width: 100%;
+    }
+
+    #ecommerce {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    #produtos {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h4 {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 5px 18px;
+        margin-bottom: 0;    
+    }
+
+    #ecommerce {
+        padding: 10px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    #produtos {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    /* #produtos:nth-child(1) {
+        display: none;
+    } */
+
+    /* #produtos:nth-child(3) {
+        margin-right: 0;
+    } */
+
+    /* #produtos:nth-child(2) {
+        display: none;
+    } */
+
+    /* #produtos:nth-child(4) {
+        display: none;
+    } */
+
+    #produtos:nth-child(5) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #ecommerce {
+        padding: 10px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    #produtos:nth-child(2) {
+        display: none;
+    }
+
+    #produtos:nth-child(4) {
+        display: none;
+    }
+}
+
+/**********************-* CONFIGURAÇÃO DO RODÁPE ****************************/
+
+footer {
+    clear: both;
+    font-size: 0.8rem;
+    background: #154987;
+    display: flex;
+}
+
+footer a {
+    color: #ffffff;
+    line-height: 0.3rem;
+}
+
+footer h6 {
+    color: #ffffff;
+}
+
+#contato {
+    margin-bottom: 20px;
+}
+
+#contato p {
+    display: none;
+}
+
+#contato,
+#cartao p {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+    footer #redes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    #logo-rodape, #rodape-menu {
+        display: none;
+    }
+   
+   .redes-footer, #contato, #cartao, #seguro {
+       display: block;
+       flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 375px) {
+    footer {
+        display: block;
+        text-align: center;
+    }
+}
+
+/*****************************************************************************/
+/*                        CONFIGURAÇÃO DO EMPRESA                            */
+/*****************************************************************************/
+
+
+#empresa {
+    display: block;
+    width: 765px;
+    float: left;
+    margin-top: 20px;
+}
+
+#empresa h3 {
+    text-align: center;
+}
+
+#empresa img {
+    margin: 10px 0 20px 0;
+    width: 765px;
+    height: 240px;
+    background-position: center center;
+    object-fit: cover;
+}
+
+#institucional {
+    float: left;
+    display: flex;
+    width: 765px;
+    margin-top: 5px;
+    border-top: 1px solid #f16322;
+    padding-top: 10px;
+    gap: 30px;
+}
+
+#institucional p {
+    margin-top: 15px;
+}
+
+.private, .frete, .troca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+#institucional h6 {
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+
+#equipe {
+    width: 420px;
+    float: right;
+    margin-top: 20px;
+    background: #f1f1f1;
+    padding: 20px;
+}
+
+#equipe img {
+    border: 2px solid #f16322;
+    border-radius: 50%;
+    height: 120px;
+}
+
+#equipe div {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#equipe div strong {
+    font-size: 1rem;
+}
+
+#equipe div > p {
+    margin-left: 10px;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 1024px) {
+   #empresa {
+       width: auto;
+   }
+
+   #empresa img {
+        width: 120%;
+   }
+
+   #equipe {
+       padding: 0;
+       width: 100%;
+       float: left;
+       text-align: center;
+   }
+
+   #equipe h5 {
+       padding: 5px;
+   }
+
+   #equipe div {
+       display: inline-block;
+       margin: 20px;
+   }
+
+   #equipe > div > p {
+       margin: 0;
+   }
+
+   #institucional {
+       width: auto;
+   }
+
+}
+
+@media screen and (min-width: 768px){
+    #equipe div:nth-child(6) {
+        margin-bottom: 0px;
+    }
+
+    #equipe div:nth-child(1) {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #institucional {
+        display: block;
+        flex-direction: column;
+        width: 322px;
+    }
+
+    #equipe, #empresa {
+        width: 322px;
+    }
+}
+
+/*****************************************************************************/
+/*                        CONFIGURAÇÃO DO LOJA                            */
+/*****************************************************************************/
+
+#section-produtos {
+    display: flex;
+}
+
+#descricao {
+    width: 500px;
+    font-size: .8rem;
+    margin: 10px 20px 0 20px;
+    display: block;
+}
+
+#descricao > ul {
+    text-indent: 20px;
+    list-style-type:disc;
+    list-style-position: inside;
+}
+
+#descricao > h6 {
+    font-style: italic;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+#descricao a {
+    font-size: 1.2rem;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+#section-produtos aside {
+    display: flex;
+    float:right;
+}
+
+aside > img {
+    margin: 10px 0;
+    width: 400px;
+    height: 400px;
+}
+
+#ecommerce-loja {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#titulo {
+    text-align: center;
+    border-top: 1px solid;
+}
+
+#ecommerce-loja #produtos {
+    width: 190px;
+}
+
+@media screen and (max-width: 1024px) {
+    #section-produtos aside img {
+        display: none;
+    }
+}
+
+/*********************** CONFIGURAÇÃO DO MINIATURA ***************************/
+
+#miniatura {
+    margin: 10px 0;
+    padding: 0;
+}
+
+#miniatura > img {
+    width: 70px;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#mini-principal > img {
+    width: 300px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    #section-produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #descricao {
+        width: 300px;
+    }
+
+    #ecommerce-loja #produtos {
+        margin-right: 20px;
+        /* display: none; */
+    }
+}
+
+
+/*****************************************************************************/
+/*                        CONFIGURAÇÃO DO BLOG                               */
+/*****************************************************************************/
+
+#blog {
+    width: 950px;
+    float: left;
+}
+
+.tempo {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px solid #f16322;
+}
+
+.tempo:nth-child(3) {
+    border: none;
+}
+
+.tempo img {
+    width: 400px;
+    height: 267px;
+}
+
+.txt-blog {
+    margin-left: 20px;
+}
+
+#blog-anuncio {
+    float: right;
+}
+
+#blog-anuncio img {
+    width: 250px;
+    height: 250px;
+}
+
+#blog-anuncio #produtos {
+    width: 250px;
+}
+
+#blog-anuncio #produtos > img {
+    width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+    #blog-anuncio {
+        display:none;
+    }
+
+    #blog {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #blog aside {
+        display: none;
+    }
+
+    .tempo {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .txt-blog {
+        margin-left: 0;
+    }
+
+    .txt-blog h5 {
+        margin-top: 10px;
+    }
+}
+
+/*****************************************************************************/
+/*                        CONFIGURAÇÃO CONTATO                              */
+/*****************************************************************************/
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+label {
+    font-size: 0.9rem;
+}
+
+.contato {
+    width: 100%;
+    background: #f1f1f1;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    flex-direction: column;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+#form-contato {
+    padding: 20px;
+}
+
+#contato-nome > div > label {
+    margin-bottom: 5px;
+}
+
+#nome, #email {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 40px;
+}
+
+#contato-comentario > div > label {
+    margin-bottom: 5px;
+}
+
+#celular {
+    width: 70%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+#mensagem {
+    width: 100%;
+    height: 100px;
+}
+
+#btn-enviar {
+    width: 100px;
+    margin: 10px auto;
+}
+
+@media screen and (min-width:1200px) {
+    .contato {
+        width: 50%;
+}
