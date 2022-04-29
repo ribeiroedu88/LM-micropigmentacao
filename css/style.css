@@ -532,7 +532,6 @@ footer h6 {
 /*                        CONFIGURAÇÃO DO EMPRESA                            */
 /*****************************************************************************/
 
-
 #empresa {
     display: block;
     width: 765px;
@@ -610,11 +609,11 @@ footer h6 {
 
 @media screen and (max-width: 1024px) {
    #empresa {
-       width: auto;
+       width: 100%;
    }
 
    #empresa img {
-        width: 120%;
+        width: 100%;
    }
 
    #equipe {
@@ -643,7 +642,7 @@ footer h6 {
 
 }
 
-@media screen and (min-width: 768px){
+/* @media screen and (min-width: 768px){
     #equipe div:nth-child(6) {
         margin-bottom: 0px;
     }
@@ -651,13 +650,13 @@ footer h6 {
     #equipe div:nth-child(1) {
         margin-top: 0px;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     #institucional {
         display: block;
         flex-direction: column;
-        width: 322px;
+        width: 100%;
     }
 
     #equipe, #empresa {
