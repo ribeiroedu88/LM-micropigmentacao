@@ -272,7 +272,7 @@ nav ul {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
     #noticias li img {
         height: 200px;
