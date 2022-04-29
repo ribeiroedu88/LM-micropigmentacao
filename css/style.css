@@ -431,9 +431,9 @@ h4 {
         display: none;
     } */
 
-    /* #produtos:nth-child(4) {
+    #produtos:nth-child(4) {
         display: none;
-    } */
+    }
 
     #produtos:nth-child(5) {
         display: none;
