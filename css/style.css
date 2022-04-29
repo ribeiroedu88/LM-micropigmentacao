@@ -440,7 +440,7 @@ h4 {
     }
 }
 
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
     #ecommerce {
         padding: 10px;
         margin-top: 0;
@@ -454,7 +454,7 @@ h4 {
     #produtos:nth-child(4) {
         display: none;
     }
-} */
+}
 
 /**********************-* CONFIGURAÇÃO DO RODÁPE ****************************/
 
