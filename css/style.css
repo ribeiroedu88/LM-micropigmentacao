@@ -510,12 +510,12 @@ footer h6 {
    }
 }
 
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
     footer {
         display: block;
         text-align: center;
     }
-} */
+}
 
 /*****************************************************************************/
 /*                        CONFIGURAÇÃO DO EMPRESA                            */
