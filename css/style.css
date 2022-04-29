@@ -282,11 +282,11 @@ nav ul {
         text-align: left;
     }
 
-    #noticias li:nth-child(1) {
+    /* #noticias li:nth-child(1) {
         display: none;
     }
 
-    /* #noticias li:nth-child(3) {
+    #noticias li:nth-child(3) {
         display: none;
     } */
 }
