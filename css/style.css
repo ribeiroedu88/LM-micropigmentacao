@@ -253,7 +253,7 @@ nav ul {
     margin-left: 10px;
 }
 
-@media screen and (min-width: 375px) {
+/* @media screen and (min-width: 375px) {
 
     #noticias li img {
         height: 200px;
@@ -270,7 +270,7 @@ nav ul {
     #noticias li:nth-child(3) {
         display: none;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
 
